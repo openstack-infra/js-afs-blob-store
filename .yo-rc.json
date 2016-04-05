@@ -1,0 +1,6 @@
+{
+  "generator-openstack": {
+    "projectName": "js registry static afs",
+    "enableGerrit": true
+  }
+}

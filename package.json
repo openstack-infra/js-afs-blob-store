@@ -1,0 +1,32 @@
+{
+  "license": "Apache-2.0",
+  "name": "registry-static-afs",
+  "version": "1.0.0",
+  "description": "A module for the registry-static mirror package, hosting files in a folder structure that works around AFS's folder size limit.",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "eslint": "^1.5.0",
+    "eslint-config-openstack": "^1.2.4",
+    "istanbul": "^0.4.2",
+    "jasmine": "^2.4.1"
+  },
+  "scripts": {
+    "test": "istanbul cover jasmine",
+    "lint": "eslint ./"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://git.openstack.org/openstack/js-registry-static-afs"
+  },
+  "keywords": [
+    "registry-static",
+    "afs",
+    "openstack"
+  ],
+  "files": [
+    "index.js",
+    "lib"
+  ],
+  "author": "Michael Krotscheck <krotscheck@gmail.com> (http://www.krotscheck.net/)"
+}
