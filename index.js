@@ -26,6 +26,11 @@
   }
 
   function desort (opts) {
+    // Null check
+    if (!opts) {
+      return opts;
+    }
+
     // First clone the instance.
     opts = clone(opts);
 

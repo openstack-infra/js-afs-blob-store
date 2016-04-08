@@ -165,6 +165,22 @@
       spy.calls.reset();
     });
 
+    it('should not fail if createWriteStream callback receives no params', function() {
+      var cbSpy = spyOn(mockBlobStore, 'createWriteStream').and.callFake(function(opts, cb) {
+        return cb();
+      });
+      var spy = jasmine.createSpy('spy');
+      var blobstore = require('../index');
+
+      blobstore.createWriteStream({}, spy);
+      expect(cbSpy.calls.mostRecent().args[0]).toEqual({});
+      expect(spy.calls.mostRecent().args[0]).toBeUndefined();
+      expect(cbSpy.calls.count()).toEqual(1);
+      expect(spy.calls.count()).toEqual(1);
+      cbSpy.calls.reset();
+      spy.calls.reset();
+    });
+
     it('should rewrite the path on createReadStream', function() {
       var spy = spyOn(mockBlobStore, 'createReadStream').and.callThrough();
       var blobstore = require('../index');
