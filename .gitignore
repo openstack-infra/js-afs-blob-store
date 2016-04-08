@@ -24,6 +24,9 @@ www
 node_modules
 bower_components
 
+# Dev test output
+output
+
 # Optional npm cache directory
 .npm
 

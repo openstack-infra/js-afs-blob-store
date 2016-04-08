@@ -9,11 +9,11 @@
     "yargs": "^4.4.0"
   },
   "devDependencies": {
-    "abstract-blob-store": "^3.2.0",
     "eslint": "^1.5.0",
     "eslint-config-openstack": "^1.2.4",
     "istanbul": "^0.4.2",
     "jasmine": "^2.4.1",
+    "mockery": "^1.4.1",
     "nsp": "^2.3.0"
   },
   "scripts": {
