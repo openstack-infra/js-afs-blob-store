@@ -1,23 +1,30 @@
 {
   "license": "Apache-2.0",
-  "name": "registry-static-afs",
+  "name": "sorting-fs-blob-store",
   "version": "1.0.0",
-  "description": "A module for the registry-static mirror package, hosting files in a folder structure that works around AFS's folder size limit.",
+  "description": "An implementation of fs-blob-store, which sorts files into alphabetical folders.",
   "main": "index.js",
-  "dependencies": {},
+  "dependencies": {
+    "fs-blob-store": "^5.2.1",
+    "yargs": "^4.4.0"
+  },
   "devDependencies": {
+    "abstract-blob-store": "^3.2.0",
     "eslint": "^1.5.0",
     "eslint-config-openstack": "^1.2.4",
     "istanbul": "^0.4.2",
-    "jasmine": "^2.4.1"
+    "jasmine": "^2.4.1",
+    "nsp": "^2.3.0"
   },
   "scripts": {
     "test": "istanbul cover jasmine",
+    "posttest": "istanbul check-coverage",
+    "prepublish": "nsp check",
     "lint": "eslint ./"
   },
   "repository": {
     "type": "git",
-    "url": "git://git.openstack.org/openstack/js-registry-static-afs"
+    "url": "git://git.openstack.org/openstack/js-sorting-fs-blob-store"
   },
   "keywords": [
     "registry-static",
@@ -28,5 +35,5 @@
     "index.js",
     "lib"
   ],
-  "author": "Michael Krotscheck <krotscheck@gmail.com> (http://www.krotscheck.net/)"
+  "author": "OpenStack <openstack-dev@lists.openstack.org> (http://www.openstack.org/)"
 }

@@ -1,7 +1,10 @@
-# registry-static-afs
-This project provides a rewrite hook for the registry-static project, allowing the mirrored files to be hosted on AFS.
+# sorting-fs-blob-store
 
-AFS has a practical folder size limit of ~64K entries. In order to accomodate as many packages as are in the npm registry, we store them in subfolders, sorted by the first letter of the package name. For example: `/foo` becomes `/f/foo`, `/bar` becomes `/b/bar`, `/q` becomes `/q/q`. File path resolution is handled via apache's `mod_rewrite`.
+This project provides a renaming shim on top of fs-blob-store, to permit the storing of large folders on AFS.
+
+AFS has a practical folder size limit of ~64K entries. In order to accomodate folders with more files than this (such as the npm registry), we store them in subfolders, sorted by the first letter of the package name. For example: `/foo` becomes `/f/foo`, `/bar` becomes `/b/bar`, `/q` becomes `/q/q`. Only files that begin with alphanumeric characters are sorted.
+
+Accessing these files via sorting-fs-blob-store is transparent. Accessing them via other methods can be accomplished via rewrite rules (for instance, apache's mod_rewrite).
 
 This module is in use by OpenStack's Infrastructure team, to run the npm portion of our unified mirrors.
 
@@ -14,7 +17,7 @@ This module is in use by OpenStack's Infrastructure team, to run the npm portion
 	
 	# Run the registry script
 	registry-static -d my.registry.com -o /var/www/registry \
-		--hooks registry-static-afs
+		--blobstore sorting-fs-blob-store
 
 ### Some useful development commands
 
