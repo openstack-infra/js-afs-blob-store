@@ -1,6 +1,6 @@
 {
   "license": "Apache-2.0",
-  "name": "sorting-fs-blob-store",
+  "name": "afs-blob-store",
   "version": "1.0.0",
   "description": "An implementation of fs-blob-store, which sorts files into alphabetical folders.",
   "main": "index.js",
@@ -24,7 +24,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://git.openstack.org/openstack/js-sorting-fs-blob-store"
+    "url": "git://git.openstack.org/openstack/js-afs-blob-store"
   },
   "keywords": [
     "registry-static",

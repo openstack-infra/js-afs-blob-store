@@ -53,7 +53,7 @@
     }
   };
 
-  describe('sorting-blob-store', function() {
+  describe('afs-blob-store', function() {
 
     beforeEach(function(done) {
       mockery.registerMock('fs-blob-store', function() {
