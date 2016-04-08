@@ -1,7 +1,7 @@
 {
   "license": "Apache-2.0",
   "name": "afs-blob-store",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "An implementation of fs-blob-store, which sorts files into alphabetical folders.",
   "main": "index.js",
   "dependencies": {
